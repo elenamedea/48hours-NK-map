@@ -1,0 +1,12 @@
+services:
+  pipeline:
+    build: .
+    volumes:
+      - ./pipeline:/app/pipeline
+      - ./cache:/app/cache
+    env_file:
+      - .env
+    working_dir: /app
+    ports:
+      - "7860:7860"
+    command: python -m pipeline.gradio_app

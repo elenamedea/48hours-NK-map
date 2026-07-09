@@ -1,0 +1,7 @@
+httpx
+beautifulsoup4
+lxml
+geopy
+supabase
+gradio
+python-dotenv

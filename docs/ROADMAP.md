@@ -128,9 +128,6 @@ Status: Complete (iOS Safari test deferred to post-festival)
       Google Maps search by name; a small portion appear slightly offset
 
 ### Frontend enhancements
-- [ ] Google Maps navigation link per event: open
-      `https://www.google.com/maps/dir/?api=1&destination={location}, Berlin, Germany`
-      in new tab from event bottom sheet
 - [ ] Route planning: allow users to select multiple venues and generate
       a walking route; evaluate MapLibre routing (OSRM)
 - [ ] iOS Safari QA: full end-to-end test (pins, bottom sheet, filters,

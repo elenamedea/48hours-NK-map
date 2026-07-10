@@ -142,9 +142,9 @@ Status: Complete (iOS Safari test deferred to post-festival)
 
 ### Documentation
 - [ ] Run OpenWiki on final codebase
-- [ ] Create public GitHub repo (pipeline, parsers, schema, specs)
-- [ ] Write README for current repo (technical + lessons learned)
-- [ ] Write README for public repo
+- [x] Create public GitHub repo (pipeline, parsers, schema, specs)
+- [x] Write README for current repo (technical + lessons learned)
+- [x] Write README for public repo
 
 ### Frontend improvements (post-festival backlog)
 - [ ] Multi-select category filter: allow selecting more than one genre

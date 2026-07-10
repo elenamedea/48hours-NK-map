@@ -613,7 +613,8 @@ Never delete existing entries. Append new ones at the bottom.
   Each category assigned one emoji (see categories table).
   Multi-genre events (genres array length > 1): pin colour #000000 (black),
   emoji 🍥 — visually distinct from both colour families, signals complexity.
-  Events with no genre assigned default to "Other" (🧶, #FB9130).
+  Events with no genre assigned default to "Other" (🧶, #FA6AEB).
+  Open ticket: rename legend label "Artsy" → "Exhibitions" (see post-festival backlog).
 - Consequences: categories.emoji and categories.colour columns populated
   in Supabase. events.pin_colour set to '#000000' and events.emoji to
   '{🍥}' for 643 multi-genre events. Legend groups labelled "Artsy" and

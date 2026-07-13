@@ -133,3 +133,9 @@ bounding box (lat 52.43–52.50, lng 13.39–13.47); outliers flagged as _suspec
 License
 
 See LICENSE.
+
+## Feedback
+
+Used the app during the festival? We'd love to hear from you.
+Submit pain points, missing features, or general suggestions here:
+[https://github.com/elenamedea/48hours-NK-map/issues/16](https://github.com/elenamedea/48hours-NK-map/issues/16)

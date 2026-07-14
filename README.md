@@ -86,20 +86,32 @@ Python pipeline → Supabase (PostgreSQL) → React/MapLibre frontend (Lovable)
 pip install -r pipeline/requirements.txt
 cp .env.example .env
 # Fill in SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY
+```
 
-Apply the schema
+### Apply the schema
 
-Run supabase/schema.sql in the Supabase SQL Editor.
+Run `supabase/schema.sql` in the Supabase SQL Editor.
 
-Run the admin UI locally
+### Run the admin UI locally
 
+```bash
 python -m pipeline.gradio_app
+```
 
 Or with Docker:
-
+```bash
 docker compose -f docker-compose.dev.yml up
+```
 
-Pipeline steps
+### Building the docs
+
+```bash
+pip install -r requirements-docs.txt
+mkdocs build --strict
+mkdocs serve
+```
+
+### Pipeline steps
 
 Run in order via the Gradio UI buttons:
 
@@ -108,29 +120,31 @@ Run in order via the Gradio UI buttons:
 3. Geocode missing — Nominatim fallback for remaining null coordinates
 4. postprocess_days.py — converts Fri/Sat/Sun to date strings
 
+```bash
 python scripts/postprocess_days.py
+```
 
 ---
-Deploy to HuggingFace Spaces
+### Deploy to HuggingFace Spaces
 
 1. Create a new Space (Gradio SDK, Python 3.12)
 2. Add SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY as Space secrets
 3. Push this repo to the Space's git remote
 
 ---
-Technical notes
+### Technical notes
 
-- Multi-day events: time ranges like Fri 19:00 - Sun 19:00 are expanded
-into one DB row per day by event_listing_parser.py
-- Supabase row cap: PostgREST returns max 1000 rows regardless of .limit();
-use .range() pagination to fetch all rows
-- Upsert deduplication: Postgres rejects ON CONFLICT when the same key
-appears twice in one batch; deduplicate (link, day) client-side before upserting
+- Multi-day events: time ranges like `Fri 19:00 - Sun 19:00` are expanded
+  into one DB row per day by `event_listing_parser.py`
+- Supabase row cap: PostgREST returns max 1000 rows regardless of `.limit()`;
+  use `.range()` pagination to fetch all rows
+- Upsert deduplication: Postgres rejects `ON CONFLICT` when the same key
+  appears twice in one batch; deduplicate `(link, day)` client-side before upserting
 - Coordinate validation: all scraped coords validated against Neukölln
-bounding box (lat 52.43–52.50, lng 13.39–13.47); outliers flagged as _suspect
+  bounding box (lat 52.43–52.50, lng 13.39–13.47); outliers flagged as `_suspect`
 
 ---
-License
+### License
 
 See LICENSE.
 

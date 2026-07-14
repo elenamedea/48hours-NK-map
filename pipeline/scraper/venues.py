@@ -1,3 +1,5 @@
+"""Scrapes venue pages linked from /en/programm/karte for address and coordinates."""
+
 import logging
 import re
 import time

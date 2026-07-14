@@ -141,7 +141,8 @@ Status: Complete (iOS Safari test deferred to post-festival)
 - [ ] Evaluate Docker containerisation for full local stack
 
 ### Documentation
-- [ ] Run OpenWiki on final codebase
+- [x] Generate pipeline docs: narrative wiki (docs/wiki/) + MkDocs API
+      reference (mkdocstrings) — OpenWiki dropped, needed a paid API key
 - [x] Create public GitHub repo (pipeline, parsers, schema, specs)
 - [x] Write README for current repo (technical + lessons learned)
 - [x] Write README for public repo

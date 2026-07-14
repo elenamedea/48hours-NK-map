@@ -1,8 +1,11 @@
+"""Parses a venue page: name, address, Google Maps link, accessibility, hosted event slugs."""
+
 import re
 from bs4 import BeautifulSoup
 
 
 def parse(html: str, slug: str) -> dict:
+    """Parse a venue page's HTML into a dict of name, address, maps_url, accessibility, event_slugs."""
     soup = BeautifulSoup(html, "lxml")
 
     h1 = soup.find("h1")

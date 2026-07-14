@@ -1,3 +1,5 @@
+"""Nominatim fallback geocoding for events missing scraped coordinates (ADR-018)."""
+
 import logging
 import time
 

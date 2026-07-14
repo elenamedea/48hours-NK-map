@@ -1,3 +1,5 @@
+"""Orchestrates the pipeline steps: scrape -> enrich -> geocode, each returning a RunResult."""
+
 from __future__ import annotations
 
 import logging

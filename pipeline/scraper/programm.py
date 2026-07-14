@@ -1,3 +1,5 @@
+"""Scrapes the /en/programm listing page: event×day records and the canonical genre list."""
+
 import logging
 import time
 

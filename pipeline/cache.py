@@ -1,3 +1,5 @@
+"""Disk cache for raw scraped HTML, keyed by URL with a 24h TTL."""
+
 import hashlib
 import logging
 import time
@@ -16,6 +18,7 @@ def _path(url: str) -> Path:
 
 
 def get(url: str) -> str | None:
+    """Return cached HTML for url, or None if missing or past CACHE_TTL."""
     p = _path(url)
     if not p.exists():
         return None
@@ -25,11 +28,13 @@ def get(url: str) -> str | None:
 
 
 def put(url: str, html: str) -> None:
+    """Write html to the cache for url, creating CACHE_DIR if needed."""
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     _path(url).write_text(html, encoding="utf-8")
 
 
 def clear() -> None:
+    """Delete all cached HTML files."""
     if CACHE_DIR.exists():
         for f in CACHE_DIR.glob("*.html"):
             f.unlink()

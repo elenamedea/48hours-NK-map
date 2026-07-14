@@ -1,0 +1,43 @@
+site_name: 48hours Neukölln Map — Pipeline Docs
+site_description: Documentation for the Python scraping/geocoding pipeline behind the 48hours Neukölln festival map
+repo_url: https://github.com/elenamedea/48hours-NK-map
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+          options:
+            show_source: true
+            show_root_heading: true
+            heading_level: 2
+
+nav:
+  - Home: index.md
+  - Wiki:
+      - Architecture Overview: wiki/architecture.md
+      - Pipeline Data Flow: wiki/data-flow.md
+      - Database Schema: wiki/schema.md
+      - Running the Pipeline: wiki/running-the-pipeline.md
+  - Specification: SPEC.md
+  - Decisions (ADR Log): DECISIONS.md
+  - Roadmap: ROADMAP.md
+  - API Reference:
+      - Overview: reference/index.md
+      - config: reference/config.md
+      - db: reference/db.md
+      - cache: reference/cache.md
+      - geocoder: reference/geocoder.md
+      - pipeline: reference/pipeline.md
+      - gradio_app: reference/gradio-app.md
+      - scraper.programm: reference/scraper-programm.md
+      - scraper.venues: reference/scraper-venues.md
+      - parsers.event_listing_parser: reference/parsers-event-listing-parser.md
+      - parsers.coord_parser: reference/parsers-coord-parser.md
+      - parsers.venue_parser: reference/parsers-venue-parser.md

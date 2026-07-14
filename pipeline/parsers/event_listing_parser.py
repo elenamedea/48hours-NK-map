@@ -1,3 +1,5 @@
+"""Parses event×day records out of the /en/programm listing page HTML."""
+
 import re
 from bs4 import BeautifulSoup
 

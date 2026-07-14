@@ -1,8 +1,11 @@
+"""Extracts (lat, lng) from a venue page's Google Maps link."""
+
 from urllib.parse import urlparse, parse_qs
 from pipeline.config import BBOX
 
 
 def parse(maps_url: str) -> tuple[float, float, str] | None:
+    """Parse a Google Maps `?query=lat,lng` URL. Returns (lat, lng, source) with source 'scraped' or 'scraped_suspect' if outside the Neukölln bounding box, or None if unparseable."""
     try:
         qs = parse_qs(urlparse(maps_url).query)
         lat_str, lng_str = qs["query"][0].split(",", 1)

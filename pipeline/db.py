@@ -1,3 +1,5 @@
+"""Supabase upsert/query helpers, all wrapped with retry-on-failure."""
+
 import logging
 import time
 
@@ -23,6 +25,7 @@ def _client() -> Client:
 
 
 def with_retry(fn, retries: int = 3, delay: float = 2.0):
+    """Call fn(), retrying on any exception up to `retries` times with `delay` seconds between attempts. Resets the cached client on failure."""
     global _db
     last_exc: Exception | None = None
     for attempt in range(1, retries + 1):

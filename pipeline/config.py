@@ -1,3 +1,5 @@
+"""Pipeline-wide constants: URLs, bounding box, rate limits, cache TTL, table names."""
+
 import os
 from pathlib import Path
 from dotenv import load_dotenv

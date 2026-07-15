@@ -24,7 +24,7 @@ Feel free to share any feedback with me; I will come back with an updated versio
 
 https://nk-48hours-map.lovable.app
 
-<video src="48hours-NK-map-04072026.mp4" controls width="600"></video>
+<video src="https://raw.githubusercontent.com/elenamedea/48hours-NK-map/main/48hours-NK-map-04072026.mp4" controls width="600"></video>
 
 ---
 

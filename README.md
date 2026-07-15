@@ -1,9 +1,22 @@
-# 48hours Neukölln Map — Pipeline
+# 🗺️ 48hours Neukölln Map 🗺️
 
-> **[TEMPLATE — revise before publishing]**
-> Replace this block with 3–5 sentences covering: why this app was built,
-> who it is for, what problem it solves, what makes 48hours Neukölln worth
-> mapping, and any personal motivation behind it.
+Hi people! 
+
+Since 2013 I am a regular visitor of the 48h NK festival, a definite summer highlight for me. My experience during the festival is quiet similar to a treasure hunt and a min. of 15K steps per day is guaranteed.
+
+The last couple of years I was really missing a mobile-first festival interactive map and even scraped the programme previously, but did not managed to finalise the map. Apparently 2026 was the year to implement it and navigate conveniently through my screen.
+
+*(fun fact: 2026 was also the first year that the festival collaborate with [WALLS](https://walls.link/en) on an interactive map)*
+
+It is a rather simple implemention consisting of scraping all the events through the 3 days of the festival from the official programme, geocoding venue locations, and plotting them under a [dark-mode map](https://basemap.de/beta/beta-styles/) with day, genre, and open-now filtering (*cf*. screen record).
+
+For each event its category and accessibility status is presented and by clicking it you redirect under the respective page of the official festival's website.
+
+The app is aimed for any visitor willing to scroll around the lively neighbourhood of Neukölln and enjoy art, connect with people, discover purposeful communities, challenge their horizons, or just spice up their weekend by *"hunting the NK-gems 💎"*.
+
+Feel free to share any feedback with me; I will come back with an updated version for 2027 festival, and who knows which else similar use case. ;)
+
+*Anthropic models (Sonnet 4.6, 5 and Fable 5) assisted me in planning and implementation*
 
 ---
 
@@ -118,7 +131,7 @@ mkdocs serve
 Run in order via the Gradio UI buttons:
 
 1. Scrape events — fetches /en/programm, upserts all event×day rows
-2. Enrich with coords — scrapes venue pages, patches address + coordinates
+2. Enrich venues — scrapes venue pages, patches address + coordinates
 3. Geocode missing — Nominatim fallback for remaining null coordinates
 4. postprocess_days.py — converts Fri/Sat/Sun to date strings
 
@@ -148,10 +161,10 @@ python scripts/postprocess_days.py
 ---
 ### License
 
-See LICENSE.
+See MIT license.
 
 ## Feedback
 
-Used the app during the festival? We'd love to hear from you.
+Used the app during the festival? I would love to hear from you.
 Submit pain points, missing features, or general suggestions here:
 [https://github.com/elenamedea/48hours-NK-map/issues/16](https://github.com/elenamedea/48hours-NK-map/issues/16)

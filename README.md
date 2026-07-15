@@ -11,6 +11,8 @@
 
 https://nk-48hours-map.lovable.app
 
+<video src="48hours-NK-map-04072026.mp4" controls width="600"></video>
+
 ---
 
 ## What this repo contains

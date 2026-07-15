@@ -10,6 +10,8 @@ The last couple of years I was really missing a mobile-first festival interactiv
 
 It is a rather simple implemention consisting of scraping all the events through the 3 days of the festival from the official programme, geocoding venue locations, and plotting them under a [dark-mode map](https://basemap.de/beta/beta-styles/) with day, genre, and open-now filtering (*cf*. screen record).
 
+https://github.com/user-attachments/assets/2cd346ba-4d6d-454a-9308-c48bcca24715
+
 For each event its category and accessibility status is presented and by clicking it you redirect under the respective page of the official festival's website.
 
 The app is aimed for any visitor willing to scroll around the lively neighbourhood of Neukölln and enjoy art, connect with people, discover purposeful communities, challenge their horizons, or just spice up their weekend by *"hunting the NK-gems 💎"*.

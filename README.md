@@ -2,7 +2,7 @@
 
 Hi people! 
 
-Since 2013 I am a regular visitor of the 48h NK festival, a definite summer highlight for me. My experience during the festival is quiet similar to a treasure hunt and a min. of 15K steps per day is guaranteed.
+Since 2013 I am a regular visitor of the [48h NK festival](https://48-stunden-neukoelln.de/en/festival), a definite summer highlight for me. My experience during the festival is quiet similar to a treasure hunt and a min. of 15K steps per day is guaranteed.
 
 The last couple of years I was really missing a mobile-first festival interactive map and even scraped the programme previously, but did not managed to finalise the map. Apparently 2026 was the year to implement it and navigate conveniently through my screen.
 

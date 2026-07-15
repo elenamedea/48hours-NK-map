@@ -4,7 +4,8 @@ Hi people!
 
 Since 2013 I am a regular visitor of the 48h NK festival, a definite summer highlight for me. My experience during the festival is quiet similar to a treasure hunt and a min. of 15K steps per day is guaranteed.
 
-The last couple of years I was really missing a mobile-first festival interactive map and even scraped the programme previously, but did not managed to finalise the map. Apparently 2026 was the year to implement it and navigate conveniently through my screen 
+The last couple of years I was really missing a mobile-first festival interactive map and even scraped the programme previously, but did not managed to finalise the map. Apparently 2026 was the year to implement it and navigate conveniently through my screen.
+
 *(fun fact: 2026 was also the first year that the festival collaborate with [WALLS](https://walls.link/en) on an interactive map)*
 
 It is a rather simple implemention consisting of scraping all the events through the 3 days of the festival from the official programme, geocoding venue locations, and plotting them under a [dark-mode map](https://basemap.de/beta/beta-styles/) with day, genre, and open-now filtering (*cf*. screen record).
